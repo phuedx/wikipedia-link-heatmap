@@ -4,6 +4,7 @@
     "lint": "standard --fix"
   },
   "dependencies": {
+    "clipboardy": "^1.2.3",
     "csv-parse": "^2.0.0"
   },
   "devDependencies": {
