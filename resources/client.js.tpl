@@ -41,8 +41,10 @@ let DATA = <%= DATA %>
 DATA = DATA['0:Barack Obama']
 
 ;(function () {
-  // Stolen (not stolen) from
-  // https://developer.mozilla.org/en-US/docs/Web/API/Element/getClientRects.
+
+  // addClientRectsOverlay taken from
+  // https://developer.mozilla.org/en-US/docs/Web/API/Element/getClientRects
+  // by Mozilla Contributors and licensed under CC-BY-SA 2.5.
   function addClientRectsOverlay (parent, elt, opacity) {
     // Absolutely position a div over each client rect so that its border width
     // is the same as the rectangle's width.
