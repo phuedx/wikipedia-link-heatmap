@@ -2,7 +2,7 @@ const resolve = require('path').resolve
 const fs = require('fs')
 const parse = require('csv-parse')
 
-const IN = resolve('./Popups_page_link_interactions.tsv')
+const IN = resolve('./resources/Barack_Obama_link_interactions.tsv')
 const OUT = resolve('./Popups_page_link_interactions.json')
 
 const parser = parse({
