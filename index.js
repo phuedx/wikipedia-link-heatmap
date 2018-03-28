@@ -3,7 +3,9 @@ const fs = require('fs')
 const parse = require('csv-parse')
 
 const IN = resolve('./resources/Barack_Obama_link_interactions.tsv')
-const OUT = resolve('./Popups_page_link_interactions.json')
+const OUT = resolve('./client.js')
+
+const CLIENT_SRC_TPL = fs.readFileSync(resolve('./resources/client.js.tpl')).toString()
 
 const parser = parse({
   delimiter: '\t'
@@ -51,5 +53,7 @@ fs.createReadStream(IN)
       }
     }
 
-    fs.writeFileSync(OUT, JSON.stringify(result))
+    clientSrc = CLIENT_SRC_TPL.replace('<%= DATA %>', JSON.stringify(result))
+
+    fs.writeFileSync(OUT, clientSrc)
   })
