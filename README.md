@@ -7,6 +7,7 @@ A heatmap of link interactions for the Barack Obama page on English Wikipedia (e
 ## Usage
 
 ```
+npm install
 node make.js
 ```
 
